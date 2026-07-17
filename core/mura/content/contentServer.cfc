@@ -497,13 +497,13 @@ version 2 without this exception.  You may, if you choose, apply this exception 
 </cffunction>
 
 <cffunction name="render401" output="true">
-	<cfheader statuscode="401" statustext="Unauthorized" />
+	<cfheader statuscode="401" />
 	<cfcontent reset="true">
 	<cfabort>
 </cffunction>
 
 <cffunction name="render404" output="true">
-	<cfheader statuscode="404" statustext="Content Not Found" />
+	<cfheader statuscode="404" />
 	<!--- Must reset the linkservID to prevent recursive 404s --->
 	<cfset request.linkServID="">
 	<cfset renderFilename("404",true,false)>

@@ -188,8 +188,7 @@
 		<cftry>
 		<cfreturn deserializeJSON(res.Filecontent)>
 		<cfcatch>
-			<cfheader statuscode="400" statustext="400 Bad Request
-" />
+			<cfheader statuscode="400" />
 			<cfdump var="#res#" abort="true"></cfcatch>
 		</cftry>
 	</cffunction>
